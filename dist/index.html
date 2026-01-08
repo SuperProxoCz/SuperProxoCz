@@ -115,6 +115,15 @@ function toggleSidebar(){
 const trollBtn = document.getElementById('troll-btn');
 const audio = document.getElementById('troll-audio');
 let fadeInterval = null;
+let audioUnlocked = false;
+
+// Unlock audio on first click of ??? button
+trollBtn.addEventListener('click', () => {
+  if (!audioUnlocked) {
+    audio.play().then(() => audio.pause());
+    audioUnlocked = true;
+  }
+}, { once: true });
 
 function fadeAudio(toVolume, duration = 500) {
   clearInterval(fadeInterval);
@@ -125,7 +134,7 @@ function fadeAudio(toVolume, duration = 500) {
     let newVolume = audio.volume + volumeStep;
     if ((volumeStep > 0 && newVolume >= toVolume) || (volumeStep < 0 && newVolume <= toVolume)) {
       audio.volume = toVolume;
-      if(toVolume === 0) audio.pause(); // pause at 0 volume
+      if(toVolume === 0) audio.pause();
       clearInterval(fadeInterval);
     } else {
       audio.volume = newVolume;
@@ -133,14 +142,15 @@ function fadeAudio(toVolume, duration = 500) {
   }, stepTime);
 }
 
+// Hover logic for fading music
 trollBtn.addEventListener('mouseenter', () => {
-  if (audio.paused) audio.play();
-  fadeAudio(1); // fade in to full volume
+  if (audioUnlocked) {
+    if (audio.paused) audio.play();
+    fadeAudio(1);
+  }
 });
 
-trollBtn.addEventListener('mouseleave', () => {
-  fadeAudio(0); // fade out and pause
-});
+trollBtn.addEventListener('mouseleave', () => fadeAudio(0));
 </script>
 
 </body>
