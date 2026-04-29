@@ -3,7 +3,7 @@ While i do use github mainly for **education** i will also share some projects o
 I am not as experienced but i know some problem solving and feedback, i know some bash, shell, html, and have experience with windows, linux, android, but not ios or mac since i can't really use these[...]
 I use arch btw
 
-## My Resources
+## My SHI
 
-- 🧠 [Personal Obsidian Vault](#) - My personal knowledge base
-- 🎨 [Arch Wallpapers](#) - Collection of wallpapers for Arch Linux
+- [Personal Obsidian Vault](#) - writing till i die
+- [Arch Wallpapers](#) - wall
