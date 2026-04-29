@@ -5,5 +5,5 @@ I use arch btw
 
 ## My SHI
 
-- [Personal Obsidian Vault](https://github.com/SuperProxoCz/archwallpapers) - writing till i die
+- [Personal Obsidian Vault](https://github.com/SuperProxoCz/PersonalObsidianVaultExceptForEveryoneCauseHellYeahSoGoAheadAndReadMyPersonalClassNotesOrWhateverI) - writing till i die
 - [Arch Wallpapers](https://github.com/SuperProxoCz/archwallpapers) - wall
